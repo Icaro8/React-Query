@@ -2,7 +2,7 @@ import { createGlobalStyle } from "styled-components";
 
 //! font-family: 'Fira Code', monospace;
 //! font-family: 'Montserrat', sans-serif;
-export const GlobaStyle = createGlobalStyle`
+export default createGlobalStyle`
   :root{
     --white:#FFFFFF;
     --black:#000000;
@@ -49,5 +49,9 @@ export const GlobaStyle = createGlobalStyle`
   }
   a{
     text-decoration: none;
+  }
+  body,#root{
+    background-color: ${(props) => props.theme.colors.background};
+    color: ${(props) => props.theme.colors.primary}
   }
 `;

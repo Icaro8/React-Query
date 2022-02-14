@@ -5,17 +5,12 @@ import { QueryClientProvider } from "react-query";
 import { BrowserRouter } from "react-router-dom";
 
 import { Client } from "./utils/queryClient";
-import { Layout } from "./layout";
-import { GlobaStyle } from "./styles/GlobalStyles";
 
 ReactDOM.render(
   <React.StrictMode>
     <QueryClientProvider client={Client}>
       <BrowserRouter>
-        <GlobaStyle />
-        <Layout>
-          <App />
-        </Layout>
+        <App />
       </BrowserRouter>
     </QueryClientProvider>
   </React.StrictMode>,

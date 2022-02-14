@@ -6,7 +6,6 @@ import { Container } from "./styles";
 export function Home() {
   const { loading, user } = userGithub("Icaro8");
   const [count, setCount] = useState(0);
-  console.log(user);
   return (
     <Container>
       <h1>{user?.bio}</h1>

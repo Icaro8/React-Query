@@ -5,5 +5,5 @@
     "moduleResolution": "node"
   },
   "include": ["vite.config.ts"],
-  "files": ["src/styled.theme.interface.ts"]
+  "files": ["src/styles/styled.theme.interface.ts"]
 }

@@ -3,10 +3,14 @@ import React from "react";
 import { Header } from "./Header";
 import { Footer } from "./Footer";
 
-export const Layout: React.FC = ({ children }) => {
+interface PropsLayout {
+  handleTheme: () => void;
+}
+
+export const Layout: React.FC<PropsLayout> = ({ handleTheme, children }) => {
   return (
     <>
-      <Header />
+      <Header handleTheme={handleTheme} />
       {children}
       <Footer />
     </>
