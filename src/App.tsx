@@ -43,11 +43,9 @@ export function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/repos" element={<Respositories />} />
+          <Route path="*" element={<ErroPage />} />
         </Routes>
       </Layout>
-      <Routes>
-        <Route path="*" element={<ErroPage />} />
-      </Routes>
     </ThemeProvider>
   );
 }
