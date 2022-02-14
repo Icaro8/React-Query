@@ -8,6 +8,8 @@ import light from "./Themes/light";
 import dark from "./Themes/dark";
 import { Layout } from "./layout";
 import GlobaStyle from "./styles/GlobalStyles";
+import { ErroPage } from "./pages/error";
+
 export function App() {
   const [theme, setTheme] = useState(light);
   useEffect(() => {
@@ -43,10 +45,9 @@ export function App() {
           <Route path="/repos" element={<Respositories />} />
         </Routes>
       </Layout>
+      <Routes>
+        <Route path="*" element={<ErroPage />} />
+      </Routes>
     </ThemeProvider>
   );
 }
-/*
-   <ThemeProvider theme={theme}>
-    </ThemeProvider>
-*/

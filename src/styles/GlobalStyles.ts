@@ -25,6 +25,12 @@ export default createGlobalStyle`
     --blue-500:#3182CE;
     --blue-600:#2B6CB0;
     --blue-700:#2C5282;
+
+
+    --react-color:#00d8ff;
+
+    //purple
+    --purple-400:#9F7AEA;
   }
   
   *{
@@ -49,9 +55,11 @@ export default createGlobalStyle`
   }
   a{
     text-decoration: none;
+    color:${(props) => props.theme.colors.primary}
   }
   body,#root{
     background-color: ${(props) => props.theme.colors.background};
     color: ${(props) => props.theme.colors.primary}
   }
+  
 `;
