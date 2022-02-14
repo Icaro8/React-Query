@@ -1,19 +1,7 @@
 import { useState } from "react";
 import { useQuery } from "react-query";
 import axios from "axios";
-
-interface userPops {
-  login: string;
-  id: number;
-  avatar_url: string;
-  url: string;
-  name: string;
-  bio: string;
-  public_repos: string;
-  followers: number;
-  following: string;
-  created_at: string;
-}
+import { userPops } from "../interfaces/user.interface";
 
 export function userGithub(name: string) {
   const [user, setUser] = useState<userPops | null>(null);

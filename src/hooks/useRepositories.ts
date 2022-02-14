@@ -1,21 +1,7 @@
 import axios from "axios";
 import { useState } from "react";
 import { useQuery } from "react-query";
-
-interface Repositorie {
-  id: number;
-  name: string;
-  description: string;
-  url: string;
-  size: number;
-  created_at: string;
-  updated_at: string;
-  language: string;
-  visibility: string;
-  stargazers_count: number;
-  watchers_count: number;
-}
-
+import { Repositorie } from "../interfaces/repositorie.interface";
 export function useRepositories(name: string) {
   const [repositorieUser, setRepositorieUser] = useState<Repositorie[] | null>(
     null
