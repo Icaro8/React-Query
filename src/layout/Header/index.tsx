@@ -17,7 +17,7 @@ interface PropsHeader {
 export function Header({ handleTheme }: PropsHeader) {
   const theme = useTheme();
   const Location = useLocation();
-  console.log(window.screen);
+
   return (
     <Container>
       <div className="first-child">
@@ -27,8 +27,15 @@ export function Header({ handleTheme }: PropsHeader) {
       <ContainerController>
         <Navigation>
           <nav>
-            <Link to="/">Home</Link>
-            <Link to="/repos">Repositórios</Link>
+            <Link to="/" className={Location.pathname === "/" ? "active" : ""}>
+              Home
+            </Link>
+            <Link
+              to="/repos"
+              className={Location.pathname === "/repos" ? "repo" : ""}
+            >
+              Repositórios
+            </Link>
           </nav>
         </Navigation>
         <ThemeController>
