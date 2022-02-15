@@ -8,7 +8,7 @@ export const Container = styled.div`
   padding: 20px;
   border: 1px solid;
   border-color: ${darken(0.2, "#9f7aea")};
-  width: 400px;
+  width: 350px;
   margin: auto;
   border-radius: 5px;
   div {
