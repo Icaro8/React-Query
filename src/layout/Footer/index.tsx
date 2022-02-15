@@ -13,7 +13,6 @@ import {
 export function Footer() {
   return (
     <Container>
-      <strong>&copy;Todos direitos reservados</strong>
       <ContainerAtribuites>
         <TypeSCriptIcon />
         <StyledIcon />
