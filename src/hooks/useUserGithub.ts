@@ -9,7 +9,7 @@ export function userGithub(name: string) {
 
   useQuery("user.github", () =>
     axios
-      .get(`http://api.github.com/users/${name}`)
+      .get(`https://api.github.com/users/${name}`)
       .then((response) => setUser(response.data))
       .catch((error) => setLoading(false))
   );

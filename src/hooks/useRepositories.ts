@@ -9,7 +9,7 @@ export function useRepositories(name: string) {
   const [inLoading, setInLoading] = useState(true);
   useQuery("repos.user", () =>
     axios
-      .get(`http://api.github.com/users/${name}/repos`)
+      .get(`https://api.github.com/users/${name}/repos`)
       .then((response) => {
         setRepositorieUser(response.data);
         setInLoading(false);
